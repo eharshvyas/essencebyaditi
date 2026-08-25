@@ -5,14 +5,15 @@ import SmoothScroll from '../components/SmoothScroll.jsx';
 interface Props {
   title: string;
   description: string;
+  lang?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang = 'en' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon-64.png" />

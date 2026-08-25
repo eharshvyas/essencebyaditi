@@ -1,0 +1,88 @@
+---
+import Base from '../../layouts/Base.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsApp from '../../components/WhatsApp.astro';
+import { Reveal, KineticLines } from '../../components/Motion.jsx';
+import ContactForm from '../../components/ContactForm.jsx';
+import { BRAND, SOCIALS } from '../../data/content.js';
+import { getT } from '../../i18n.js';
+
+const T = getT('mr');
+const whatsappUrl = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("नमस्ते डॉ. अदिती, मला भेट बुक करायची आहे.")}`;
+const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
+---
+
+<Base title="भेट बुक करा — डॉ. अदिती वरेकर खताते | एसन्स बाय अदिती" description="डॉ. अदिती वरेकर खताते यांच्याशी नवी मुंबई मध्ये किंवा ऑनलाइन आयुर्वेदिक सल्ला बुक करा — केस, त्वचा, नखं, PCOS, स्त्री-आरोग्य व पंचकर्म." lang="mr">
+  <Navbar />
+
+  <main class="pt-32">
+    <section class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+      <div class="fluid-bg"></div>
+      <div class="relative">
+        <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">{T.contact.overline}</p>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.06] text-brand-dark">
+          <KineticLines client:load lines={[T.contact.h1]} />
+          <span class="text-magic italic"><KineticLines client:load lines={[T.contact.h2]} delay={0.15} /></span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-10 mt-16 grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-7">
+        <ContactForm client:visible formspreeId={FORMSPREE_ID} />
+        <!-- WhatsApp fallback below form -->
+        <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-500">
+          <span>त्वरित संपर्क हवा?</span>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-semibold text-[#25D366] hover:underline">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            {T.whatsapp}
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 space-y-6">
+        <Reveal client:visible delay={0.1}>
+          <div class="rounded-[2rem] bg-gradient-to-br from-brand-navy to-[#4A1D6E] text-white p-8 lg:p-10 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-25" style="background: radial-gradient(24rem 16rem at 100% 0%, #F9A8D4, transparent)"></div>
+            <div class="relative">
+              <h3 class="font-serif text-xl mb-6">{T.contact.instant}</h3>
+              <p class="text-sm text-indigo-100/90 mb-6">फॉर्म, व्हॉट्सॲप किंवा ईमेल — आम्ही २४ तासांत पुष्टी करतो.</p>
+              <div class="mt-8 pt-7 border-t border-white/15 space-y-4 text-sm">
+                <a href={`tel:${BRAND.phone.replace(/\s/g, '')}`} class="flex items-center gap-3 hover:text-pink-200 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  {BRAND.phone}
+                </a>
+                <a href={`mailto:${BRAND.email}`} class="flex items-center gap-3 hover:text-pink-200 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  {BRAND.email}
+                </a>
+                <p class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  {BRAND.location}
+                </p>
+                <p class="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  {T.contact.hours}
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+        <Reveal client:visible delay={0.15}>
+          <div class="img-frame rounded-[2rem]">
+            <img src="/images/clinic-2.webp" alt="क्लिनिकमधील सल्लागार कक्ष" loading="lazy" class="w-full aspect-[4/3] object-cover" />
+          </div>
+        </Reveal>
+        <Reveal client:visible delay={0.2}>
+          <p class="text-xs text-slate-400 px-2">LinkedIn: <a class="underline hover:text-brand-pink" href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer">Dr. Aditi Varekar Khatate</a> · Instagram <span class="text-slate-500">@essencebyaditi</span></p>
+        </Reveal>
+      </div>
+    </section>
+
+    <div class="pb-4"></div>
+  </main>
+
+  <Footer />
+  <WhatsApp />
+</Base>

@@ -5,4 +5,11 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://essencebyaditi.com',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'mr'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

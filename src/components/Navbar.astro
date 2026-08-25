@@ -1,6 +1,7 @@
 ---
 import NavbarClient from './NavbarClient.jsx';
 const currentPath = Astro.url.pathname;
+const lang = currentPath.startsWith('/mr') ? 'mr' : 'en';
 ---
 
-<NavbarClient client:load currentPath={currentPath} />
+<NavbarClient client:load currentPath={currentPath} lang={lang} />
