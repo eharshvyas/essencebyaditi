@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-navy: #1E3A8A;
+    --brand-pink: #DB2777;
+  }
+  body {
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: hsl(210 40% 98%);
+    color: #0F172A;
+  }
+  ::selection {
+    background: #c7d2fe;
+    color: #1e3a8a;
+  }
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(240,245,255,0.55));
+  backdrop-filter: blur(28px) saturate(1.4);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: 0 8px 32px rgba(30,58,138,0.06), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.glass-pill {
+  background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(232,240,255,0.5));
+  backdrop-filter: blur(30px) saturate(1.5);
+  -webkit-backdrop-filter: blur(30px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 40px rgba(30,58,138,0.1), inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(199,210,254,0.3);
+}
+
+.glass-deep {
+  background: linear-gradient(150deg, rgba(255,255,255,0.62), rgba(237,242,255,0.42));
+  backdrop-filter: blur(22px) saturate(1.35);
+  -webkit-backdrop-filter: blur(22px) saturate(1.35);
+  border: 1px solid rgba(199,210,254,0.55);
+  box-shadow: 0 6px 28px rgba(30,58,138,0.05), inset 0 1px 0 rgba(255,255,255,0.65);
+}
+
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+.sheen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s cubic-bezier(0.22,1,0.36,1);
+  pointer-events: none;
+}
+.sheen:hover::after {
+  left: 130%;
+}
+
+.fluid-bg {
+  position: absolute;
+  inset: -20rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+.fluid-bg::before,
+.fluid-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+}
+.fluid-bg::before {
+  width: 42rem;
+  height: 42rem;
+  top: 6rem;
+  right: 2rem;
+  background: radial-gradient(circle, rgba(199,210,254,0.55), transparent 65%);
+  animation: drift 18s ease-in-out infinite alternate;
+}
+.fluid-bg::after {
+  width: 36rem;
+  height: 36rem;
+  bottom: 8rem;
+  left: 4rem;
+  background: radial-gradient(circle, rgba(191,219,254,0.45), transparent 65%), radial-gradient(circle at 30% 70%, rgba(251,207,232,0.4), transparent 60%);
+  animation: drift 22s ease-in-out infinite alternate-reverse;
+}
+@keyframes drift {
+  from { transform: translate(0,0) scale(1); }
+  to { transform: translate(3rem,2rem) scale(1.08); }
+}
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.65,0,0.35,1);
+}
+.link-underline:hover::after,
+.link-underline[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgba(30,58,138,0.14);
+}
+
+.img-frame {
+  overflow: hidden;
+}
+.img-frame img {
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.img-frame:hover img {
+  transform: scale(1.05);
+}
+
+.text-magic {
+  background: linear-gradient(100deg, #1E3A8A 10%, #7C3AED 50%, #DB2777 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.marquee-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,81 @@
+---
+import { BRAND, SOCIALS } from '../data/content.js';
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about/', label: 'About' },
+  { href: '/services/', label: 'Services' },
+  { href: '/blog/', label: 'Journal' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+
+<footer class="relative mt-14 bg-brand-slate text-slate-300 overflow-hidden">
+  <div class="absolute inset-0 opacity-20 pointer-events-none" style="background: radial-gradient(60rem 30rem at 80% -10%, #2563EB55, transparent), radial-gradient(40rem 20rem at 5% 110%, #DB277733, transparent)"></div>
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
+    <div class="grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-4">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-11 h-11 rounded-2xl bg-white/95 flex items-center justify-center shrink-0">
+            <img src="/images/logo.png" alt="Essence by Aditi" class="w-8 h-8" width="32" height="32" />
+          </span>
+          <div class="font-serif text-xl text-white">Essence <span class="italic text-pink-300">by Aditi</span></div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-400 max-w-xs">{BRAND.tagline}</p>
+        <p class="mt-4 text-xs text-slate-500">{BRAND.doctorFull}<br />{BRAND.regNo}</p>
+        <div class="flex gap-3 mt-6">
+          <a href={SOCIALS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-slate-300 transition-all duration-300 hover:bg-gradient-to-br hover:from-pink-400 hover:to-indigo-500 hover:text-white hover:border-transparent hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href={SOCIALS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-slate-300 transition-all duration-300 hover:bg-gradient-to-br hover:from-pink-400 hover:to-indigo-500 hover:text-white hover:border-transparent hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href={SOCIALS.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-slate-300 transition-all duration-300 hover:bg-gradient-to-br hover:from-pink-400 hover:to-indigo-500 hover:text-white hover:border-transparent hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs uppercase tracking-[0.2em] text-pink-300 mb-5">Explore</h4>
+        <ul class="space-y-3 text-sm">
+          {navLinks.map(({ href, label }) => (
+            <li><a href={href} class="hover:text-white transition-colors">{label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h4 class="text-xs uppercase tracking-[0.2em] text-pink-300 mb-5">Reach Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            {BRAND.location}
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href={`tel:${BRAND.phone.replace(/\s/g, '')}`} class="hover:text-white">{BRAND.phone}</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href={`mailto:${BRAND.email}`} class="hover:text-white">{BRAND.email}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h4 class="text-xs uppercase tracking-[0.2em] text-pink-300 mb-5">The Essence Letter</h4>
+        <p class="text-sm text-slate-400 mb-4">Monthly Ayurvedic wisdom for hair, skin & hormones. No spam, ever.</p>
+        <a href={`mailto:${BRAND.email}?subject=Subscribe to The Essence Letter`} class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-white/10">
+          Subscribe via email
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row flex-wrap justify-between gap-3 text-xs text-slate-500">
+      <p>&copy; {new Date().getFullYear()} Essence by Aditi &middot; essencebyaditi.com &middot; All rights reserved.</p>
+      <p>Content is educational, not a substitute for medical consultation.</p>
+      <p>Designed by <a href="https://withharsh.com" target="_blank" rel="noopener noreferrer" class="text-pink-300/90 hover:text-pink-200 transition-colors font-medium">withHarsh.com</a></p>
+    </div>
+  </div>
+</footer>

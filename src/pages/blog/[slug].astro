@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsApp from '../../components/WhatsApp.astro';
+import { BLOG_POSTS } from '../../data/blog.js';
+import { BRAND } from '../../data/content.js';
+
+export function getStaticPaths() {
+  return BLOG_POSTS.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const others = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+---
+
+<Base title={`${post.title} | Essence by Aditi`} description={post.excerpt}>
+  <Navbar />
+
+  <main class="pt-32">
+    <article class="max-w-3xl mx-auto px-6">
+      <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-medium text-brand-blue hover:text-brand-navy transition-colors mb-8">
+        ← All articles
+      </a>
+      <div class="flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-brand-blue mb-6">
+        <span class="bg-blue-50 rounded-full px-3 py-1">{post.category}</span>
+        <span class="text-slate-400 normal-case tracking-normal">{post.readTime} · {post.date}</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.12] text-brand-dark">{post.title}</h1>
+      <p class="mt-5 text-lg text-slate-600 leading-relaxed font-light">{post.excerpt}</p>
+
+      <div class="flex items-center gap-3 mt-8 pb-8 border-b border-indigo-100">
+        <img src="/images/portrait-4.webp" alt={BRAND.doctor} class="w-10 h-10 rounded-full object-cover" width="40" height="40" />
+        <div>
+          <p class="text-sm font-semibold text-slate-800">{BRAND.doctor}</p>
+          <p class="text-xs text-slate-500">BAMS, MD (Ayurveda)</p>
+        </div>
+      </div>
+
+      <div class="img-frame rounded-3xl mt-10 shadow-lg shadow-blue-900/5">
+        <img src={post.image} alt={post.title} class="w-full aspect-[16/9] object-cover" />
+      </div>
+
+      <div class="mt-12 space-y-10">
+        {post.body.map((section) => (
+          <div>
+            <h2 class="font-serif text-2xl text-brand-navy tracking-tight mb-4">{section.h}</h2>
+            <p class="text-slate-700 leading-[1.85]">{section.p}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16 glass-deep rounded-3xl p-8 lg:p-10">
+        <h3 class="font-serif text-xl text-brand-dark mb-2">Facing this concern yourself?</h3>
+        <p class="text-sm text-slate-600 mb-6">Book a detailed consultation with Dr. Aditi — in clinic (Navi Mumbai) or online.</p>
+        <a href="/contact/" class="inline-flex items-center gap-2 rounded-full bg-brand-navy text-white px-6 py-3 text-sm font-semibold transition-all duration-300 hover:bg-brand-blue hover:-translate-y-0.5">
+          Book Consultation →
+        </a>
+      </div>
+    </article>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
+      <h2 class="font-serif text-2xl tracking-tight text-brand-dark mb-8">Keep <span class="italic text-brand-navy">reading</span></h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {others.map((p) => (
+          <a href={`/blog/${p.slug}/`} class="card-lift group rounded-2xl border border-indigo-100 bg-white p-6 block">
+            <p class="text-[10px] font-bold uppercase tracking-widest text-brand-blue mb-3">{p.category}</p>
+            <h3 class="font-serif text-base leading-snug text-brand-dark group-hover:text-brand-navy transition-colors">{p.title}</h3>
+            <span class="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-brand-blue">Read →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsApp />
+</Base>
