@@ -1,0 +1,12 @@
+{
+  "name": "Essence by Aditi",
+  "short_name": "Essence by Aditi",
+  "description": "Ayurvedic care by Dr. Aditi Varekar Khatate — hair, skin, nails & women's health, Navi Mumbai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1E3A8A",
+  "icons": [
+    { "src": "/favicon-64.png", "sizes": "64x64", "type": "image/png" }
+  ]
+}
