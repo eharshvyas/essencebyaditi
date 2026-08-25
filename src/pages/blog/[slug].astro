@@ -4,8 +4,10 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsApp from '../../components/WhatsApp.astro';
 import { Reveal } from '../../components/Motion.jsx';
+import NewsletterForm from '../../components/NewsletterForm.jsx';
 import { BLOG_POSTS } from '../../data/blog.js';
 import { BRAND } from '../../data/content.js';
+const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
 
 export function getStaticPaths() {
   return BLOG_POSTS.map((post) => ({
@@ -63,6 +65,11 @@ const others = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
           </a>
         </div>
       </Reveal>
+
+      <div class="mt-16 max-w-3xl mx-auto px-6">
+        <p class="text-xs text-slate-400 mb-4">Enjoyed this? Get one physician-written letter a month:</p>
+        <NewsletterForm client:visible formspreeId={FORMSPREE_ID} />
+      </div>
     </article>
 
     <section class="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">

@@ -4,8 +4,10 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsApp from '../../components/WhatsApp.astro';
 import { Reveal, KineticLines } from '../../components/Motion.jsx';
+import NewsletterForm from '../../components/NewsletterForm.jsx';
 import { BLOG_POSTS } from '../../data/blog.js';
 import { BRAND } from '../../data/content.js';
+const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
 
 const [featured, ...rest] = BLOG_POSTS;
 ---
@@ -66,9 +68,7 @@ const [featured, ...rest] = BLOG_POSTS;
       <Reveal client:visible>
         <h2 class="font-serif text-2xl md:text-3xl tracking-tight text-brand-dark mb-4">Never miss an <span class="text-magic italic">article</span></h2>
         <p class="text-sm text-slate-600 mb-7">Join The Essence Letter — one email a month, physician-written.</p>
-        <a href={`mailto:${BRAND.email}?subject=Subscribe to The Essence Letter`} class="sheen inline-flex items-center gap-2 rounded-full bg-brand-navy text-white px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-brand-blue hover:-translate-y-0.5 hover:shadow-xl">
-          Subscribe via email →
-        </a>
+        <NewsletterForm client:visible formspreeId={FORMSPREE_ID} />
       </Reveal>
     </section>
   </main>

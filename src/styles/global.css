@@ -150,12 +150,19 @@
   transform: scale(1.05);
 }
 
-.text-magic {
+.text-magic,
+.text-magic span {
   background: linear-gradient(100deg, #1E3A8A 10%, #7C3AED 50%, #DB2777 90%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+:lang(mr) body,
+html[lang="mr"] body,
+html[lang="mr"] .font-serif {
+  font-family: 'Mukta', 'Manrope', sans-serif;
 }
 
 .marquee-text {

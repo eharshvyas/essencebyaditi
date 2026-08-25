@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 import { KineticLines, FadeIn } from './Motion';
 
 export default function HeroSection() {
@@ -16,8 +17,8 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center w-full">
         <div className="lg:col-span-7">
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-            <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs font-medium text-brand-navy mb-8">
-              BAMS · MD (Ayurveda) · Gold Medalist · Navi Mumbai
+            <span className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-xs font-medium text-[#1E3A8A] mb-8">
+              <Sparkles size={13} className="text-pink-500" /> BAMS · MD (Ayurveda) · Gold Medalist · Navi Mumbai
             </span>
           </motion.div>
 
