@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsApp from '../components/WhatsApp.astro';
+---
+
+<Base title="Page Not Found — Essence by Aditi" description="The page you're looking for doesn't exist.">
+  <Navbar />
+
+  <main class="pt-40 pb-32 min-h-screen flex items-center">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <div class="fluid-bg"></div>
+      <div class="relative">
+        <p class="font-serif text-[120px] leading-none font-medium text-magic select-none">404</p>
+        <h1 class="font-serif text-3xl md:text-4xl tracking-tight text-brand-dark mt-4 mb-6">
+          This page doesn't exist
+        </h1>
+        <p class="text-slate-600 mb-10">It may have moved, or you may have followed a broken link.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/" class="sheen inline-flex items-center gap-2 rounded-full bg-brand-navy text-white px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-gradient-to-r hover:from-brand-blue hover:to-brand-pink hover:-translate-y-0.5 hover:shadow-xl">
+            Go home →
+          </a>
+          <a href="/contact/" class="link-underline text-sm font-semibold text-brand-navy">Book a consultation</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+  <WhatsApp />
+</Base>
