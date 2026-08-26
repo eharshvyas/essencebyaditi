@@ -17,7 +17,7 @@ import { SERVICES, FAQS } from '../data/content.js';
         <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">Treatments & Care</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.06] text-brand-dark max-w-3xl">
           <KineticLines client:load lines={['Six doors to', 'one destination:']} />
-          <span class="text-magic italic"><KineticLines client:load lines={['balance.']} delay={0.3} /></span>
+          <KineticLines client:load lines={["balance."]} delay={0.3} spanClassName="text-magic italic" />
         </h1>
         <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Every protocol is individualised after a detailed consultation — your constitution (Prakriti), your imbalance (Vikriti), your reports, your life.</p>
       </div>

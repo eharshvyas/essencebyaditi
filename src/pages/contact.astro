@@ -21,7 +21,7 @@ const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
         <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">Appointments</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.06] text-brand-dark">
           <KineticLines client:load lines={['Begin your']} />
-          <span class="text-magic italic"><KineticLines client:load lines={['healing chapter.']} delay={0.15} /></span>
+          <KineticLines client:load lines={["healing chapter."]} delay={0.15} spanClassName="text-magic italic" />
         </h1>
       </div>
     </section>

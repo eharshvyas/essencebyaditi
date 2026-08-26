@@ -22,7 +22,7 @@ const mrFaqs = localizeFaqs(FAQS, 'mr');
         <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">{T.servicesPage.overline}</p>
         <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.06] text-brand-dark max-w-3xl">
           <KineticLines client:load lines={[T.servicesPage.l1, T.servicesPage.l2]} />
-          <span class="text-magic italic"><KineticLines client:load lines={[T.servicesPage.l3]} delay={0.3} /></span>
+          <KineticLines client:load lines={[T.servicesPage.l3]} delay={0.3} spanClassName="text-magic italic" />
         </h1>
         <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">{T.servicesPage.sub}</p>
       </div>

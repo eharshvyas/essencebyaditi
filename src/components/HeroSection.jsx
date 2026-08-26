@@ -25,9 +25,7 @@ export default function HeroSection() {
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.04] text-brand-dark">
             <KineticLines lines={['Your essence,']} delay={0.2} />
             <KineticLines lines={['restored by']} delay={0.34} />
-            <span className="text-magic italic">
-              <KineticLines lines={['Ayurveda.']} delay={0.48} />
-            </span>
+            <KineticLines lines={['Ayurveda.']} delay={0.48} spanClassName="text-magic italic" />
           </h1>
 
           <FadeIn delay={0.9}>
