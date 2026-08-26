@@ -6,7 +6,7 @@ export function KineticLines({ lines, className = '', spanClassName = '', delay 
       {lines.map((line, i) => (
         <span key={i} className="block overflow-hidden pb-1">
           <motion.span
-            className={`block ${spanClassName}`}
+            className={spanClassName ? `inline-block ${spanClassName}` : 'block'}
             initial={{ y: '110%' }}
             animate={{ y: 0 }}
             transition={{ duration: 0.9, delay: delay + i * 0.14, ease: [0.22, 1, 0.36, 1] }}
