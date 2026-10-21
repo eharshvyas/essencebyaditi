@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import SmoothScroll from '../components/SmoothScroll.jsx';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -30,15 +31,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content="https://essencebyaditi.com/images/portrait-4.webp" />
+    <meta property="og:image" content="https://essencebyaditi.com/images/hero-aditi.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://essencebyaditi.com/images/portrait-4.webp" />
+    <meta name="twitter:image" content="https://essencebyaditi.com/images/hero-aditi.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/images/portrait-4.webp" />
+    <link rel="preload" as="image" href="/images/hero-aditi.webp" />
     <link rel="manifest" href="/manifest.json" />
     {lang === 'mr' ? (
       <>
@@ -57,7 +58,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "name": "Dr. Aditi Varekar Khatate",
       "alternateName": "Dr. Aditi Sanjay Varekar",
       "url": "https://essencebyaditi.com",
-      "image": "https://essencebyaditi.com/images/portrait-4.webp",
+      "image": "https://essencebyaditi.com/images/hero-aditi.webp",
       "medicalSpecialty": ["Ayurveda", "Trichology", "Dermatology", "Gynecology"],
       "description": "Ayurvedic physician (BAMS, MD Ayurveda) specialising in hair, skin, nails, women's health, PCOS and Panchakarma in Navi Mumbai, Maharashtra.",
       "address": {
@@ -67,11 +68,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "postalCode": "410210",
         "addressCountry": "IN"
       },
-      "telephone": "+919421925629",
-      "email": "aditivarekar@gmail.com",
+      "telephone": "+918976463546",
+      "email": "aditisherbal@gmail.com",
       "sameAs": [
         "https://in.linkedin.com/in/aditi-varekar-khatate-622699261",
-        "https://instagram.com/essencebyaditi"
+        "https://instagram.com/dr.aditi_ayurveda"
       ],
       "hasCredential": [
         {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MD (Ayurveda), YMT Ayurvedic Medical College, 2024"},
@@ -82,5 +83,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <body class="grain min-h-screen">
     <SmoothScroll client:load />
     <slot />
+    <Analytics />
   </body>
 </html>
