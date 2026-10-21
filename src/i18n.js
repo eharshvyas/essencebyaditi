@@ -3,18 +3,18 @@ export const STR = {
     nav: { home: "Home", about: "About", services: "Services", blog: "Journal", contact: "Contact", book: "Book Consultation" },
     hero: {
       badge: "BAMS · MD (Ayurveda) · Gold Medalist · Navi Mumbai",
-      l1: "Your essence,", l2: "restored by", l3: "Ayurveda.",
-      sub1: "Root-cause care for ", subBold: "hair, skin, nails & women's health",
-      sub2: " — by Dr. Aditi Varekar Khatate, a published researcher blending classical Ayurveda with modern diagnostics.",
+      l1: "Your essence,", l2: "nurtured through", l3: "Ayurveda.",
+      sub1: "Rooted in Ayurveda. Guided by your individuality. ", subBold: "Hair, skin, nails & women's health",
+      sub2: " — by Dr. Aditi Varekar Khatate, blending classical Ayurveda with advanced diagnostics.",
       cta1: "Book a Consultation", cta2: "Explore treatments",
       stats: [["7+", "Years in medicine"], ["4", "Merit medals"], ["1000s", "Patients guided"]],
-      quote: "\u201cWe treat the root. Radiance follows.\u201d", quoteBy: "— Dr. Aditi Varekar Khatate",
+      quote: "\u201cRadiance, Inside Out.\u201d", quoteBy: "— Dr. Aditi Varekar Khatate",
     },
     manifesto: { overline: "The Essence Philosophy", h1: "Simple on the surface.", h2: "Profound at the root." },
     servicesSec: { overline: "Treatments", h1: "Where science meets", h2: "shastra", all: "All services", learn: "Learn more" },
     clinic: {
       overline: "In Clinic", h1: "Diagnosis you can", hI: "see", h2: ", care you can feel",
-      text: "From trichoscopy-guided scalp analysis to Nadi Pariksha and lab-report reviews — every consultation at Essence is unhurried, evidence-aware and deeply personal. Currently consulting at Urban Ayurveda, Kharghar & Thane.",
+      text: "From trichoscopy-guided scalp analysis to Nadi Pariksha and lab-report reviews — every consultation at Essence is unhurried, evidence-aware and deeply personal. Currently consulting at Urban Ayurveda — Kharghar, Thane & Kalyan.",
       bullets: ["40–60 minute detailed first consultations", "Modern diagnostics + classical assessment", "Personalised diet, lifestyle & medicine plans", "Online video consultations available"],
       cta: "Meet Dr. Aditi",
     },
@@ -25,7 +25,7 @@ export const STR = {
     contact: {
       overline: "Appointments", h1: "Begin your", h2: "healing chapter.",
       instant: "Prefer instant booking?",
-      hours: "Mon–Sat · 10 am – 8 pm IST",
+      hours: "10 am – 2 pm · 6 pm – 9 pm (Appointment required)",
       concerns: ["Hair & Scalp", "Skin & Cosmetology", "Nail Health", "Women's Health / PCOS", "Panchakarma & Detox", "General / Integrative", "Other"],
     },
     servicesPage: {
@@ -54,7 +54,7 @@ export const STR = {
     whatsapp: "Chat on WhatsApp",
     elements: {
       overline: "Panchamahabhuta Siddhanta", h1: "Built on the", h2: "five elements",
-      sub: "Ayurveda sees you as a living balance of five great elements. Every Essence protocol works to restore that original balance.",
+      sub: "Ayurveda understands the body and its functions through the interplay of the five great elements. This framework helps us understand individual variation — not as a checklist, but as a way of interpreting physiology, pathology and response to treatment.",
       guru: "Trained in the classical Guru–Shishya Parampara — knowledge received from teachers, practised with reverence.",
       items: [
         { name: "Prithvi", sub: "Earth — stability & nourishment" },
@@ -91,7 +91,7 @@ export const STR = {
     contact: {
       overline: "भेटीची वेळ", h1: "तुमच्या आरोग्याची", h2: "नवी सुरुवात.",
       instant: "त्वरित बुकिंग हवं?",
-      hours: "सोम–शनि · सकाळी १० – रात्री ८",
+      hours: "सकाळी १० – दुपारी २ · संध्याकाळी ६ – रात्री ९ (भेट आवश्यक)",
       concerns: ["केस व टाळू", "त्वचा व कॉस्मेटोलॉजी", "नखांचे आरोग्य", "स्त्री-आरोग्य / PCOS", "पंचकर्म व शुद्धीकरण", "सामान्य / एकात्मिक", "इतर"],
     },
     servicesPage: {
@@ -140,14 +140,14 @@ const SERVICES_MR = {
   nails: { title: "नखांचे आरोग्य", short: "ठिसूळ, रेषा असलेली किंवा रंग बदललेली नखं — आरोग्याचा आरसा.", long: "नखं ही अंतर्गत असंतुलनाची खिडकी. नखांच्या लक्षणांवरून पोषण व दोषांचे निदान करून औषधी, खनिजं व आहाराने सुधारणा.", points: ["ठिसूळ नखं", "बुरशीजन्य संसर्ग", "रेषा व रंगबदल", "पोषण सुधारणा"] },
   "womens-health": { title: "स्त्री-आरोग्य (स्त्रीरोग)", short: "PCOS, हार्मोन संतुलन, प्रजनन व मासिक पाळी — नैसर्गिक उपचार.", long: "PCOS/PCOD, अनियमित पाळी, PMS, रजोनिवृत्ती व गर्भधारणापूर्व आरोग्य — आयुर्वेदिक स्त्रीरोग शास्त्र आणि आधुनिक निदान यांचा संगम.", points: ["PCOS / PCOD", "मासिक पाळीचे विकार", "प्रजनन व गर्भधारणापूर्व", "रजोनिवृत्ती काळजी"] },
   panchakarma: { title: "पंचकर्म व शुद्धीकरण", short: "शरीराची पुनर्रचना करणाऱ्या शास्त्रीय शुद्धीकरण चिकित्सा.", long: "वमन, विरेचन, बस्ती, नस्य व रक्तमोक्षण — खोलवर साचलेले दोष काढून अग्नी पुन्हा प्रज्वलित करणाऱ्या चिकित्सा.", points: ["संपूर्ण शरीर शुद्धी", "तणाव व थकवा", "चयापचय विकार", "ऋतूनुसार शुद्धीकरण"] },
-  integrative: { title: "एकात्मिक सल्ला", short: "आयुर्वेद + आधुनिक वैद्यक — महाराष्ट्र-अधिकृत एकात्मिक निदान.", long: "महाराष्ट्र-नोंदणीकृत असल्याने आधुनिक वैद्यकाने निदान — लॅब रिपोर्ट विश्लेषण, प्रामाणिक सल्ला आणि खऱ्या अर्थाने एकात्मिक काळजी.", points: ["लॅब रिपोर्ट विश्लेषण", "आहार व जीवनशैली", "दीर्घकालीन आजार", "योग व आहार मार्गदर्शन"] },
+  "advanced-diagnostics": { title: "प्रगत निदान तंत्रे", short: "आधुनिक निदान साधने आणि शास्त्रीय आयुर्वेदिक परीक्षण — अचूक काळजीसाठी.", long: "महाराष्ट्र-नोंदणीकृत वैद्य म्हणून प्रगत निदान तंत्रे — लॅब रिपोर्ट्स, इमेजिंग आणि आधुनिक परीक्षण — शास्त्रीय आयुर्वेदासोबत वापरून सर्वांगीण काळजी.", points: ["लॅब रिपोर्ट विश्लेषण", "आहार व जीवनशैली", "दीर्घकालीन आजार", "योग व आहार मार्गदर्शन"] },
 };
 
 const MANIFESTO_MR = {
-  "01": { title: "विज्ञानाचा पाया", text: "YMT आयुर्वेद महाविद्यालयातून BAMS आणि MD (आयुर्वेद), सुवर्णपदक विजेती आणि प्रकाशित संशोधक — आमचे उपचार शास्त्रशुद्ध आणि वैद्यकीयदृष्ट्या काटेकोर आहेत." },
-  "02": { title: "खरोखर एकात्मिक", text: "महाराष्ट्रात नोंदणीकृत असल्याने आधुनिक वैद्यकाने निदानाची अधिकृत परवानगी — तुमचे रिपोर्ट्स आणि नाडी दोन्ही सारख्याच सफाईने वाचल्या जातात." },
-  "03": { title: "आतून येणारं सौंदर्य", text: "केस, त्वचा आणि नखं ही रंगवायची पृष्ठभागं नाहीत — ती आतल्या संतुलनाची आरसे आहेत. आम्ही मुळावर उपचार करतो, तेज आपोआप येतं." },
-  "04": { title: "स्त्री-आरोग्य प्रथम", text: "PCOS पासून रजोनिवृत्तीपर्यंत — घाई न करता, निर्णय न लावता केलेली काळजी. स्त्रीरोग हा इथे विभाग नाही, ही बांधिलकी आहे." },
+  "01": { title: "शास्त्रशुद्ध पाया", text: "आयुर्वेद हा माझ्या वैद्यकीय सेवेचा पाया आहे. शास्त्रीय तत्त्वांवर आधारित, वैद्यकीय अनुभव आणि संशोधनातून सतत सुधारत नेलेला." },
+  "02": { title: "व्यक्ती प्रथम", text: "एकाच आजाराचा अनुभव दोन व्यक्तींना सारखा नसतो. उपचार सुरू होतात व्यक्तीला समजून घेण्यापासून — फक्त रोगाचं नाव ठेवण्यापासून नाही." },
+  "03": { title: "लक्षणापलीकडे", text: "केस, त्वचा आणि इतर बाह्य तक्रारी ही एका मोठ्या कथेचा भाग असतात. आम्ही लक्षणापलीकडे पाहतो — कारणं शोधतो." },
+  "04": { title: "परंपरा, संदर्भासहित", text: "शास्त्रीय आयुर्वेदिक परीक्षण हे केंद्रस्थानी असतं, आधुनिक निदान माहिती योग्य ठिकाणी विचारात घेतली जाते — संदर्भ, स्पष्टता आणि जबाबदारी यासाठी." },
 };
 
 const FAQS_MR = [

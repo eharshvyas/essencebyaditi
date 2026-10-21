@@ -24,13 +24,13 @@ export default function HeroSection() {
 
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.04] text-brand-dark">
             <KineticLines lines={['Your essence,']} delay={0.2} />
-            <KineticLines lines={['restored by']} delay={0.34} />
+            <KineticLines lines={['nurtured through']} delay={0.34} />
             <KineticLines lines={['Ayurveda.']} delay={0.48} spanClassName="text-magic italic" />
           </h1>
 
           <FadeIn delay={0.9}>
             <p className="mt-8 text-base md:text-lg text-slate-600 max-w-xl leading-relaxed">
-              Root-cause care for <strong className="text-slate-800 font-semibold">hair, skin, nails & women's health</strong> — by Dr. Aditi Varekar Khatate, a published researcher blending classical Ayurveda with modern diagnostics.
+              Rooted in Ayurveda. Guided by your individuality. <strong className="text-slate-800 font-semibold">Hair, skin, nails & women's health</strong> — by Dr. Aditi Varekar Khatate, blending classical Ayurveda with advanced diagnostics.
             </p>
           </FadeIn>
 
@@ -64,7 +64,7 @@ export default function HeroSection() {
           >
             <div className="absolute -inset-3 rounded-[2.3rem] bg-gradient-to-br from-indigo-200/50 via-white/0 to-pink-200/50 blur-sm" aria-hidden="true" />
             <div className="img-frame relative rounded-[2rem] rotate-1 shadow-2xl shadow-blue-900/15">
-              <img src="/images/portrait-4.webp" alt="Dr. Aditi Varekar Khatate at her clinic" className="w-full aspect-[4/5] object-cover" width="500" height="625" />
+              <img src="/images/hero-aditi.webp" alt="Dr. Aditi Varekar Khatate at her clinic" className="w-full aspect-[4/5] object-cover" width="500" height="625" />
             </div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -72,7 +72,7 @@ export default function HeroSection() {
               transition={{ delay: 1.2 }}
               className="absolute -bottom-6 -left-6 glass rounded-2xl px-5 py-4 max-w-[240px]"
             >
-              <p className="font-serif italic text-sm text-brand-navy">"We treat the root. Radiance follows."</p>
+              <p className="font-serif italic text-sm text-brand-navy">"Radiance, Inside Out."</p>
               <p className="text-[11px] text-slate-500 mt-2">— Dr. Aditi Varekar Khatate</p>
             </motion.div>
           </motion.div>

@@ -39,7 +39,7 @@ import { BRAND, TIMELINE, CREDENTIALS } from '../data/content.js';
             <div class="relative">
               <div class="absolute -inset-3 rounded-[2.3rem] bg-gradient-to-br from-pink-200/50 via-white/0 to-indigo-200/50 blur-sm" aria-hidden="true"></div>
               <div class="img-frame relative rounded-[2rem] shadow-2xl shadow-blue-900/10 -rotate-1">
-                <img src="/images/portrait-1.webp" alt="Dr. Aditi Varekar at her MD graduation" class="w-full aspect-[3/4] object-cover" />
+                <img src="/images/hero-aditi.webp" alt="Dr. Aditi Varekar with award and medal" class="w-full aspect-[3/4] object-cover" />
               </div>
             </div>
           </Reveal>
@@ -105,7 +105,7 @@ import { BRAND, TIMELINE, CREDENTIALS } from '../data/content.js';
     <section class="pb-8 max-w-7xl mx-auto px-6 lg:px-10">
       <Reveal client:visible>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {["/images/event-1.webp", "/images/clinic-6.webp", "/images/portrait-2.webp", "/images/studio-1.webp"].map((src, i) => (
+          {["/images/graduation.webp", "/images/consultation-1.webp", "/images/portrait-new-2.webp", "/images/clinic-desk.webp"].map((src, i) => (
             <div class:list={['img-frame rounded-2xl', i % 2 ? 'mt-6' : '']}>
               <img src={src} alt="Dr. Aditi — clinic and milestones" loading="lazy" class="w-full aspect-[3/4] object-cover" />
             </div>

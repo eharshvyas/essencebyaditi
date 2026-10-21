@@ -2,20 +2,20 @@ export const BRAND = {
   name: "Essence by Aditi",
   doctor: "Dr. Aditi Varekar Khatate",
   doctorFull: "Dr. Aditi Sanjay Varekar-Khatate, BAMS, MD (Ayurveda)",
-  tagline: "Ancient Wisdom. Modern Science. Your Essence.",
+  tagline: "Ancient wisdom. Modern techniques. Reclaim the essence.",
   regNo: "Reg. No. I-95034-A (MCIM)",
-  email: "aditivarekar@gmail.com",
-  phone: "+91 94219 25629",
-  location: "Kharghar, Navi Mumbai, Maharashtra",
+  email: "aditisherbal@gmail.com",
+  phone: "+91 89764 63546",
+  location: "Kharghar, Thane & Kalyan, Maharashtra",
   domain: "essencebyaditi.com",
-  whatsapp: "919421925629",
+  whatsapp: "918976463546",
 };
 
 export const SOCIALS = {
-  instagram: "https://instagram.com/essencebyaditi",
-  facebook: "https://facebook.com/essencebyaditi",
+  instagram: "https://instagram.com/dr.aditi_ayurveda",
+  facebook: "https://www.facebook.com/share/18SYWw1Qcc/",
   linkedin: "https://in.linkedin.com/in/aditi-varekar-khatate-622699261",
-  youtube: "https://youtube.com/@essencebyaditi",
+  youtube: "https://youtube.com/@aditivarekarkhatate8176?si=Azxhly9-pgsvSMT1",
 };
 
 export const SERVICES = [
@@ -65,21 +65,21 @@ export const SERVICES = [
     image: "/images/still-oils.webp",
   },
   {
-    id: "integrative",
+    id: "advanced-diagnostics",
     num: "06",
-    title: "Integrative Consultation",
-    short: "Maharashtra-authorized integrative diagnosis — Ayurveda meets modern medicine.",
-    long: "As a Maharashtra-registered practitioner, Dr. Aditi is authorized to diagnose using modern medicine alongside Ayurveda — you get lab-report literacy, honest referrals and truly integrative care.",
+    title: "Advanced Diagnostic Techniques",
+    short: "Modern diagnostic tools combined with classical Ayurvedic assessment for precise care.",
+    long: "As a Maharashtra-registered practitioner, Dr. Aditi uses advanced diagnostic techniques — lab reports, imaging and modern assessment — alongside classical Ayurvedic methods for truly comprehensive and evidence-informed care.",
     points: ["Lab report analysis", "Diet & lifestyle plans", "Chronic disease management", "Yoga & diet counselling"],
-    image: "/images/clinic-2.webp",
+    image: "/images/clinic-desk.webp",
   },
 ];
 
 export const MANIFESTO = [
-  { num: "01", title: "Rooted in Science", text: "BAMS and MD (Ayurveda) from YMT Ayurvedic Medical College, gold medalist, and a published researcher — our protocols are classical in origin and clinical in rigour." },
-  { num: "02", title: "Truly Integrative", text: "Registered in Maharashtra and authorized to diagnose with modern medicine, Dr. Aditi reads your lab reports as fluently as your Nadi — no dogma, only outcomes." },
-  { num: "03", title: "Beauty from Within", text: "Hair, skin and nails are not surfaces to be painted — they are mirrors of inner balance. We treat the root, and radiance follows." },
-  { num: "04", title: "Women, First", text: "From PCOS to menopause, women's health deserves unhurried, judgment-free care. Stri Rog is not a department here — it is a devotion." },
+  { num: "01", title: "Classical at the Core", text: "Ayurveda is the foundation of my practice. I draw from classical principles while continuously refining their application through clinical experience and research." },
+  { num: "02", title: "The Individual, First", text: "No two people experience the same condition in exactly the same way. Treatment begins with understanding the person — not simply naming the disease." },
+  { num: "03", title: "Beyond the Surface", text: "Hair, skin and other visible concerns are part of a larger story. We look beyond the symptom to understand the factors that may be contributing to it." },
+  { num: "04", title: "Tradition, With Context", text: "Classical Ayurvedic assessment remains central, while contemporary diagnostic information is considered when appropriate — bringing context, clarity and responsibility to clinical decision-making." },
 ];
 
 export const TIMELINE = [
@@ -113,10 +113,10 @@ export const TESTIMONIALS = [
 export const PARTNERS = [
   { name: "Urban Ayurveda", type: "Clinic Partner", note: "Consulting clinics in Kharghar & Thane", url: "https://www.urbanayurveda.in" },
   { name: "Kerala Ayurveda", type: "Affiliate", note: "Classical formulations & wellness products", url: "https://www.keralaayurveda.biz" },
-  { name: "Himalaya Wellness", type: "Affiliate", note: "Everyday herbal care essentials", url: "https://himalayawellness.in" },
   { name: "Sandu Pharmaceuticals", type: "Affiliate", note: "Century-old classical medicines", url: "https://www.sandu.in" },
-  { name: "Auric", type: "Affiliate", note: "Modern Ayurvedic beauty & lifestyle drinks", url: "https://www.justauric.com" },
-  { name: "Kama Ayurveda", type: "Affiliate", note: "Luxury Ayurvedic skincare rituals", url: "https://www.kamaayurveda.in" },
+  { name: "Dhanvantari Kerala", type: "Affiliate", note: "Authentic Kerala Ayurvedic treatments & products", url: "https://www.dfrkerala.com" },
+  { name: "Madhavbaug", type: "Clinic Partner", note: "Ayurvedic cardiac & metabolic care clinics", url: "https://www.madhavbaug.org" },
+  { name: "Dhootapapeshwar", type: "Affiliate", note: "Trusted classical Ayurvedic pharmaceutical formulations", url: "https://www.dhootpapeshwar.com" },
 ];
 
 export const MARQUEE_ITEMS = [
@@ -125,7 +125,8 @@ export const MARQUEE_ITEMS = [
   "Panchakarma",
   "Trichoscopy Diagnostics",
   "Ayurvedic Cosmetology",
-  "Integrative Medicine",
+  "Ayurvedic Dermatology",
+  "Advance Diagnostics",
   "Yoga & Ahara",
   "Nadi Pariksha",
 ];

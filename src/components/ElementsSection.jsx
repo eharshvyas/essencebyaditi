@@ -14,7 +14,7 @@ export default function ElementsSection() {
             Built on the <span className="text-magic italic">five elements</span>
           </h2>
           <p className="text-sm text-slate-500 mt-4 max-w-lg">
-            Ayurveda sees you as a living balance of five great elements. Every Essence protocol works to restore that original balance.
+            Ayurveda understands the body and its functions through the interplay of the five great elements. This framework helps us understand individual variation — not as a checklist, but as a way of interpreting physiology, pathology and response to treatment.
           </p>
         </Reveal>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-12">
