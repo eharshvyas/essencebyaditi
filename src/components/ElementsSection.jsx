@@ -6,7 +6,7 @@ const ICONS = [Mountain, Droplets, Flame, Wind, Orbit];
 
 export default function ElementsSection() {
   return (
-    <section className="py-20 lg:py-24 relative overflow-hidden">
+    <section className="py-20 lg:py-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.25em] text-[#2563EB] font-semibold mb-4">Panchamahabhuta Siddhanta</p>
