@@ -187,10 +187,3 @@ export function getT(lang) {
   return STR[lang] || STR.en;
 }
 
-export function getOtherLangUrl(lang, path) {
-  if (lang === 'en') {
-    return '/mr' + (path === '/' ? '/' : path);
-  }
-  const stripped = path.replace(/^\/mr/, '') || '/';
-  return stripped;
-}

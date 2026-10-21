@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import SmoothScroll from '../components/SmoothScroll.jsx';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import Analytics from '@vercel/analytics/astro';
 
@@ -82,7 +81,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     })} />
   </head>
   <body class="grain min-h-screen">
-    <SmoothScroll client:load />
     <slot />
     <ScrollToTop client:load />
     <Analytics />

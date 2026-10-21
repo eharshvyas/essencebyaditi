@@ -13,10 +13,10 @@ export default function NewsletterForm({ dark = false }) {
     setError('');
     setLoading(true);
     try {
-      const res = await fetch('/api/newsletter', {
+      const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ type: 'newsletter', email }),
       });
       if (res.ok) { setDone(true); setEmail(''); }
       else setError('Something went wrong. Try again.');
