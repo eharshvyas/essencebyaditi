@@ -7,15 +7,16 @@ import WhatsApp from '../../components/WhatsApp.astro';
 import { Reveal } from '../../components/Motion.jsx';
 import NewsletterForm from '../../components/NewsletterForm.jsx';
 import { BRAND } from '../../data/content.js';
-import { query } from '../../lib/db.js';
+import { sql } from '../../lib/db.js';
 
 const { slug } = Astro.params;
-const { rows } = await query('SELECT * FROM posts WHERE slug = $1 AND published = true LIMIT 1', [slug]);
+const db = sql();
+const rows = await db`SELECT * FROM posts WHERE slug = ${slug} AND published = true LIMIT 1`;
 if (!rows.length) return Astro.redirect('/blog/');
 const post = rows[0];
 post.body = typeof post.body === 'string' ? JSON.parse(post.body) : post.body;
 
-const { rows: othersRows } = await query('SELECT slug, title, category FROM posts WHERE slug != $1 AND published = true ORDER BY created_at DESC LIMIT 3', [slug]);
+const othersRows = await db`SELECT slug, title, category FROM posts WHERE slug != ${slug} AND published = true ORDER BY created_at DESC LIMIT 3`;
 ---
 
 <Base title={`${post.title} | Essence by Aditi`} description={post.excerpt}>

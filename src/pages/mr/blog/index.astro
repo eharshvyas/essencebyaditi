@@ -7,10 +7,11 @@ import WhatsApp from '../../../components/WhatsApp.astro';
 import { Reveal, KineticLines } from '../../../components/Motion.jsx';
 import NewsletterForm from '../../../components/NewsletterForm.jsx';
 import { getT } from '../../../i18n.js';
-import { query } from '../../../lib/db.js';
+import { sql } from '../../../lib/db.js';
 
 const T = getT('mr');
-const { rows: posts } = await query('SELECT * FROM posts WHERE published = true ORDER BY created_at DESC');
+const db = sql();
+const posts = await db`SELECT * FROM posts WHERE published = true ORDER BY created_at DESC`;
 posts.forEach(p => { p.body = typeof p.body === 'string' ? JSON.parse(p.body) : p.body; });
 
 const [featured, ...rest] = posts;

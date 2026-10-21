@@ -1,5 +1,5 @@
 export const prerender = false;
-import { query } from '../../lib/db.js';
+import { sql } from '../../lib/db.js';
 
 export async function POST({ request }) {
   try {
@@ -8,10 +8,9 @@ export async function POST({ request }) {
     if (!email) {
       return new Response(JSON.stringify({ error: 'Email required' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
     }
-    await query(
-      `INSERT INTO submissions (type, data) VALUES ('newsletter', $1)`,
-      [JSON.stringify({ email })]
-    );
+    const db = sql();
+    const payload = JSON.stringify({ email });
+    await db`INSERT INTO submissions (type, data) VALUES ('newsletter', ${payload})`;
     return new Response(JSON.stringify({ ok: true }), { status: 200, headers: { 'Content-Type': 'application/json' } });
   } catch (e) {
     return new Response(JSON.stringify({ error: 'Server error' }), { status: 500, headers: { 'Content-Type': 'application/json' } });

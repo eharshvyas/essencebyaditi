@@ -92,7 +92,10 @@ const SEED_POSTS = [
 
 async function main() {
   console.log('Creating tables...');
-  await db.query(schema);
+  const statements = schema.split(';').map(s => s.trim()).filter(Boolean);
+  for (const stmt of statements) {
+    await db.query(stmt);
+  }
   console.log('Tables created.');
 
   console.log('Seeding posts...');
