@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, Loader2, CheckCircle } from 'lucide-react';
 
-export default function NewsletterForm({ dark = false, formspreeId }) {
+export default function NewsletterForm({ dark = false }) {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -13,10 +13,10 @@ export default function NewsletterForm({ dark = false, formspreeId }) {
     setError('');
     setLoading(true);
     try {
-      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const res = await fetch('/api/newsletter', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ email, _subject: 'New Essence Letter Subscriber' }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
       });
       if (res.ok) { setDone(true); setEmail(''); }
       else setError('Something went wrong. Try again.');

@@ -11,7 +11,6 @@ import TestimonialScroll from '../components/TestimonialScroll.jsx';
 import { Reveal } from '../components/Motion.jsx';
 import { SERVICES, MANIFESTO, PARTNERS, BRAND } from '../data/content.js';
 
-const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
 ---
 
 <Base title="Essence by Aditi — Dr. Aditi Varekar Khatate | Ayurvedic Doctor Navi Mumbai" description="Root-cause Ayurvedic care for hair, skin, nails & women's health by Dr. Aditi Varekar Khatate (BAMS, MD Ayurveda), Navi Mumbai. Book a consultation.">
@@ -153,7 +152,7 @@ const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
       <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-brand-dark mb-5">The Essence <span class="text-magic italic">Letter</span></h2>
       <p class="text-slate-600 mb-9 lg:max-w-md lg:mx-auto">One thoughtful email a month — seasonal Ayurvedic rituals, hair & skin wisdom, and women's health science. Free, forever.</p>
       <div class="lg:max-w-md lg:mx-auto">
-        <NewsletterForm client:visible formspreeId={FORMSPREE_ID} />
+        <NewsletterForm client:visible />
       </div>
     </Reveal>
   </section>

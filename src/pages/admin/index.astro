@@ -1,0 +1,21 @@
+---
+export const prerender = false;
+import { isAdmin } from '../../lib/auth.js';
+if (!isAdmin(Astro.request)) return Astro.redirect('/admin/login');
+import AdminDashboard from '../../components/admin/Dashboard.jsx';
+---
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Dashboard — Essence Admin</title>
+  <style>
+    * { margin: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #f8fafc; color: #1e293b; }
+  </style>
+</head>
+<body>
+  <AdminDashboard client:load />
+</body>
+</html>

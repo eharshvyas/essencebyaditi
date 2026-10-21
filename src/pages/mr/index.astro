@@ -14,7 +14,6 @@ const T = getT('mr');
 const mrServices = localizeServices(SERVICES, 'mr');
 const mrManifesto = localizeManifesto(MANIFESTO, 'mr');
 
-const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
 const heroQuote = T.hero.quote.replace(/"/g, '');
 ---
 
@@ -233,7 +232,7 @@ const heroQuote = T.hero.quote.replace(/"/g, '');
       <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-brand-dark mb-5">{T.news.h1} <span class="text-magic italic">{T.news.h2}</span></h2>
       <p class="text-slate-600 mb-9 lg:max-w-md lg:mx-auto">{T.news.text}</p>
       <div class="lg:max-w-md lg:mx-auto">
-        <NewsletterForm client:visible formspreeId={FORMSPREE_ID} />
+        <NewsletterForm client:visible />
       </div>
     </Reveal>
   </section>

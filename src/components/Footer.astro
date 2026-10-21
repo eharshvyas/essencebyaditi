@@ -1,7 +1,6 @@
 ---
 import { BRAND, SOCIALS } from '../data/content.js';
 import NewsletterForm from './NewsletterForm.jsx';
-const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID || 'YOUR_FORM_ID';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -71,7 +70,7 @@ const navLinks = [
       <div class="md:col-span-3">
         <h4 class="text-xs uppercase tracking-[0.2em] text-pink-300 mb-5">The Essence Letter</h4>
         <p class="text-sm text-slate-400 mb-4">Monthly Ayurvedic wisdom for hair, skin & hormones. No spam, ever.</p>
-        <NewsletterForm client:visible dark={true} formspreeId={FORMSPREE_ID} />
+        <NewsletterForm client:visible dark={true} />
       </div>
     </div>
 

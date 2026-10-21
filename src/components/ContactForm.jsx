@@ -6,7 +6,7 @@ const CONCERNS = [
   "Women's Health / PCOS", "Panchakarma & Detox", "General / Integrative", "Other"
 ];
 
-export default function ContactForm({ formspreeId }) {
+export default function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', concern: '', preferred_date: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -20,9 +20,9 @@ export default function ContactForm({ formspreeId }) {
     setError('');
     setLoading(true);
     try {
-      const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
       if (res.ok) {
