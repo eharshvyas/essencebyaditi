@@ -7,6 +7,9 @@
     --brand-navy: #1E3A8A;
     --brand-pink: #DB2777;
   }
+  html, body {
+    overflow-x: hidden;
+  }
   body {
     font-family: 'Manrope', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -181,6 +184,25 @@ html[lang="mr"] .font-serif {
 
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(30,58,138,0.15);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30,58,138,0.3);
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(30,58,138,0.15) transparent;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
