@@ -63,8 +63,10 @@ export default function HeroSection() {
             className="relative"
           >
             <div className="absolute -inset-3 rounded-[2.3rem] bg-gradient-to-br from-indigo-200/50 via-white/0 to-pink-200/50 blur-sm" aria-hidden="true" />
-            <div className="img-frame relative rounded-[2rem] rotate-1 shadow-2xl shadow-blue-900/15">
+            <div className="img-frame relative rounded-[2rem] rotate-1 shadow-2xl shadow-blue-900/15 overflow-hidden">
               <img src="/images/hero-aditi.webp" alt="Dr. Aditi Varekar Khatate at her clinic" className="w-full aspect-[4/5] object-cover" width="500" height="625" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A8A]/30 via-transparent via-40% to-pink-100/20 rounded-[2rem]" aria-hidden="true" />
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-transparent to-pink-900/15 rounded-[2rem]" aria-hidden="true" />
             </div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
