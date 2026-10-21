@@ -5,8 +5,9 @@ import Footer from '../../components/Footer.astro';
 import WhatsApp from '../../components/WhatsApp.astro';
 import Marquee from '../../components/Marquee.jsx';
 import NewsletterForm from '../../components/NewsletterForm.jsx';
+import TestimonialScroll from '../../components/TestimonialScroll.jsx';
 import { Reveal } from '../../components/Motion.jsx';
-import { SERVICES, MANIFESTO, TESTIMONIALS, PARTNERS } from '../../data/content.js';
+import { SERVICES, MANIFESTO, PARTNERS } from '../../data/content.js';
 import { getT, localizeServices, localizeManifesto } from '../../i18n.js';
 
 const T = getT('mr');
@@ -187,25 +188,14 @@ const heroQuote = T.hero.quote.replace(/"/g, '');
   <!-- Testimonials -->
   <section class="py-20 lg:py-28 bg-brand-slate text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-25 pointer-events-none" style="background: radial-gradient(50rem 26rem at 15% 0%, #2563EB66, transparent), radial-gradient(40rem 22rem at 95% 100%, #DB277744, transparent)"></div>
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-10 mb-12">
       <Reveal client:visible>
         <p class="text-xs uppercase tracking-[0.25em] text-pink-300 font-semibold mb-4">{T.testi.overline}</p>
-        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-16">{T.testi.h1} <span class="italic text-pink-200">{T.testi.h2}</span></h2>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{T.testi.h1} <span class="italic text-magic-light">{T.testi.h2}</span></h2>
       </Reveal>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {TESTIMONIALS.map((t, i) => (
-          <Reveal client:visible delay={i * 0.07}>
-            <div class="card-lift h-full rounded-3xl bg-white/5 border border-white/10 p-7 backdrop-blur-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-pink-400 mb-5"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
-              <p class="text-sm leading-relaxed text-indigo-50/90">{t.text}</p>
-              <div class="mt-6 pt-5 border-t border-white/10">
-                <p class="text-sm font-semibold">{t.name}</p>
-                <p class="text-xs text-pink-300 mt-0.5">{t.concern}</p>
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+    </div>
+    <div class="relative">
+      <TestimonialScroll client:visible />
     </div>
   </section>
 

@@ -159,6 +159,15 @@
   color: transparent;
 }
 
+.text-magic-light,
+.text-magic-light span {
+  background: linear-gradient(100deg, #93C5FD 10%, #C4B5FD 50%, #F9A8D4 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 :lang(mr) body,
 html[lang="mr"] body,
 html[lang="mr"] .font-serif {

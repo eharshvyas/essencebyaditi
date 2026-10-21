@@ -104,10 +104,14 @@ export const CREDENTIALS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: "Priya S.", concern: "PCOS & hair fall", text: "Six months with Dr. Aditi and my cycles are regular for the first time in years. She explains everything — even my blood reports — with such patience." },
-  { name: "Rahul M.", concern: "Scalp & dandruff", text: "The trichoscopy session was an eye-opener. No random oils, just a precise plan. My dandruff is gone and hair fall reduced visibly in 8 weeks." },
-  { name: "Sneha K.", concern: "Acne & pigmentation", text: "She treated my skin from the inside out. The glow is real, and I finally understand my own body's patterns. Worth every session." },
-  { name: "Anita D.", concern: "Panchakarma detox", text: "A deeply professional Panchakarma experience. I went in exhausted and came out feeling ten years younger. Highly recommend her integrative approach." },
+  { name: "Priya S.", concern: "PCOS & hair fall", text: "Six months with Dr. Aditi and my cycles are regular for the first time in years. She explains everything — even my blood reports — with such patience.", avatar: "/images/avatar-ps.webp" },
+  { name: "Rahul M.", concern: "Scalp & dandruff", text: "The trichoscopy session was an eye-opener. No random oils, just a precise plan. My dandruff is gone and hair fall reduced visibly in 8 weeks.", avatar: "/images/avatar-rm.webp" },
+  { name: "Sneha K.", concern: "Acne & pigmentation", text: "She treated my skin from the inside out. The glow is real, and I finally understand my own body's patterns. Worth every session.", avatar: "/images/avatar-sk.webp" },
+  { name: "Anita D.", concern: "Panchakarma detox", text: "A deeply professional Panchakarma experience. I went in exhausted and came out feeling ten years younger. Highly recommend her integrative approach.", avatar: "/images/avatar-ad.webp" },
+  { name: "Meera K.", concern: "Nail health & nutrition", text: "I never thought ridged nails could mean something deeper. Dr. Aditi identified a nutritional gap, corrected it with herbs and diet, and my nails look healthy for the first time.", avatar: "/images/avatar-mk.webp" },
+  { name: "Vikram P.", concern: "Hair fall & stress", text: "Work stress destroyed my hairline. Dr. Aditi's approach wasn't just medicines — she changed my diet, sleep, and even my morning routine. Visible regrowth in 3 months.", avatar: "/images/avatar-vp.webp" },
+  { name: "Neha J.", concern: "Menstrual irregularity", text: "After years of painful, irregular periods, I finally feel normal. She never rushed me, always listened, and the treatment plan was so personalised. Truly grateful.", avatar: "/images/avatar-nj.webp" },
+  { name: "Sanjay P.", concern: "Chronic fatigue & digestion", text: "I was sceptical about Ayurveda. But Dr. Aditi's logical, evidence-based approach changed my mind. My energy levels and digestion have transformed completely.", avatar: "/images/avatar-sp.webp" },
 ];
 
 export const PARTNERS = [

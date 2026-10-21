@@ -40,7 +40,7 @@ export default function NavbarClient({ currentPath, lang = 'en' }) {
           <img src="/images/logo.png" alt="Essence by Aditi logo" className="w-8 h-8 transition-transform duration-500 group-hover:rotate-12" width="32" height="32" />
           <div className="leading-tight whitespace-nowrap">
             <span className="font-serif text-base sm:text-lg font-semibold text-brand-navy tracking-tight">Essence</span>
-            <span className="font-serif italic text-base sm:text-lg text-brand-pink/85"> by Aditi</span>
+            <span className="font-serif italic text-base sm:text-lg text-magic"> by Aditi</span>
           </div>
         </a>
 
