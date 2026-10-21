@@ -115,12 +115,12 @@ export const TESTIMONIALS = [
 ];
 
 export const PARTNERS = [
-  { name: "Urban Ayurveda", type: "Clinic Partner", note: "Consulting clinics in Kharghar & Thane", url: "https://www.urbanayurveda.in" },
-  { name: "Kerala Ayurveda", type: "Affiliate", note: "Classical formulations & wellness products", url: "https://www.keralaayurveda.biz" },
-  { name: "Sandu Pharmaceuticals", type: "Affiliate", note: "Century-old classical medicines", url: "https://www.sandu.in" },
-  { name: "Dhanvantari Kerala", type: "Affiliate", note: "Authentic Kerala Ayurvedic treatments & products", url: "https://www.dfrkerala.com" },
-  { name: "Madhavbaug", type: "Clinic Partner", note: "Ayurvedic cardiac & metabolic care clinics", url: "https://www.madhavbaug.org" },
-  { name: "Dhootapapeshwar", type: "Affiliate", note: "Trusted classical Ayurvedic pharmaceutical formulations", url: "https://www.dhootpapeshwar.com" },
+  { name: "Urban Ayurveda", type: "Clinic Partner", note: "Consulting clinics in Kharghar & Thane", url: "https://www.urbanayurveda.in", logo: "/images/partners/urban-ayurveda.webp" },
+  { name: "Kerala Ayurveda", type: "Affiliate", note: "Classical formulations & wellness products", url: "https://www.keralaayurveda.biz", logo: "/images/partners/kerala-ayurveda.webp" },
+  { name: "Sandu Pharmaceuticals", type: "Affiliate", note: "Century-old classical medicines", url: "https://www.sandu.in", logo: "/images/partners/sandu.webp" },
+  { name: "Dhanvantari Kerala", type: "Affiliate", note: "Authentic Kerala Ayurvedic treatments & products", url: "https://www.dfrkerala.com", logo: "/images/partners/dhanvantari.webp" },
+  { name: "Madhavbaug", type: "Clinic Partner", note: "Ayurvedic cardiac & metabolic care clinics", url: "https://www.madhavbaug.org", logo: "/images/partners/madhavbaug.webp" },
+  { name: "Dhootapapeshwar", type: "Affiliate", note: "Trusted classical Ayurvedic pharmaceutical formulations", url: "https://www.dhootpapeshwar.com", logo: "/images/partners/dhootapapeshwar.webp" },
 ];
 
 export const MARQUEE_ITEMS = [
