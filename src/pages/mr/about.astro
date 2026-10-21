@@ -110,11 +110,44 @@ const mrTimeline = localizeTimeline(TIMELINE, 'mr');
       </div>
     </section>
 
+    <!-- Certificates -->
+    <section class="py-20 lg:py-28 bg-white/50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <Reveal client:visible>
+          <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">प्रमाणपत्रे व नोंदणी</p>
+          <h2 class="font-serif text-3xl md:text-4xl tracking-tight text-brand-dark mb-14">सत्यापित. <span class="text-magic italic">नोंदणीकृत.</span></h2>
+        </Reveal>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[
+            { src: "/images/cert-bams-merit.webp", label: "BAMS गुणवत्ता प्रमाणपत्र" },
+            { src: "/images/cert-bams-degree.webp", label: "BAMS पदवी — MUHS" },
+            { src: "/images/cert-mcim.webp", label: "MCIM नोंदणी" },
+            { src: "/images/cert-cosmetology.webp", label: "आयुर्वेदिक कॉस्मेटोलॉजी — KASE" },
+            { src: "/images/cert-wjpr.webp", label: "WJPR प्रकाशन" },
+            { src: "/images/cert-pharmacovigilance.webp", label: "फार्माकोव्हिजिलन्स" },
+            { src: "/images/cert-ipr.webp", label: "IPR व संशोधन (MUHS)" },
+            { src: "/images/cert-dravyagun.webp", label: "द्रव्यगुण प्रमाणित" },
+            { src: "/images/cert-rognidan.webp", label: "रोगनिदान प्रमाणित" },
+            { src: "/images/cert-yoga-day.webp", label: "आंतरराष्ट्रीय योग दिन" },
+          ].map((c, i) => (
+            <Reveal client:visible delay={i * 0.04}>
+              <div class="card-lift glass-deep rounded-2xl overflow-hidden group">
+                <div class="aspect-[3/4] overflow-hidden">
+                  <img src={c.src} alt={c.label} loading="lazy" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <p class="text-xs text-slate-600 font-medium px-3 py-2.5 text-center">{c.label}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <!-- Photo grid -->
     <section class="py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-10">
       <Reveal client:visible>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {["/images/graduation.webp", "/images/consultation-1.webp", "/images/portrait-new-2.webp", "/images/clinic-desk.webp"].map((src, i) => (
+          {["/images/graduation-ceremony.webp", "/images/portrait-desk.webp", "/images/graduation-plaque.webp", "/images/pgdcc-diploma.webp"].map((src, i) => (
             <div class:list={['img-frame rounded-2xl', i % 2 ? 'mt-6' : '']}>
               <img src={src} alt="डॉ. अदिती — क्लिनिक व उपलब्धी" loading="lazy" class="w-full aspect-[3/4] object-cover" />
             </div>

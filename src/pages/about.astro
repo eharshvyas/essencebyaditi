@@ -101,11 +101,44 @@ import { BRAND, TIMELINE, CREDENTIALS } from '../data/content.js';
       </div>
     </section>
 
+    <!-- Certificates -->
+    <section class="py-20 lg:py-28 bg-white/50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <Reveal client:visible>
+          <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">Certificates & Registrations</p>
+          <h2 class="font-serif text-3xl md:text-4xl tracking-tight text-brand-dark mb-14">Verified. <span class="text-magic italic">On record.</span></h2>
+        </Reveal>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {[
+            { src: "/images/cert-bams-merit.webp", label: "BAMS Merit Certificate" },
+            { src: "/images/cert-bams-degree.webp", label: "BAMS Degree — MUHS" },
+            { src: "/images/cert-mcim.webp", label: "MCIM Registration" },
+            { src: "/images/cert-cosmetology.webp", label: "Ayurvedic Cosmetology — KASE" },
+            { src: "/images/cert-wjpr.webp", label: "WJPR Publication" },
+            { src: "/images/cert-pharmacovigilance.webp", label: "Pharmacovigilance" },
+            { src: "/images/cert-ipr.webp", label: "IPR & Research (MUHS)" },
+            { src: "/images/cert-dravyagun.webp", label: "Dravyagun Certified" },
+            { src: "/images/cert-rognidan.webp", label: "Rognidan Certified" },
+            { src: "/images/cert-yoga-day.webp", label: "International Yoga Day" },
+          ].map((c, i) => (
+            <Reveal client:visible delay={i * 0.04}>
+              <div class="card-lift glass-deep rounded-2xl overflow-hidden group">
+                <div class="aspect-[3/4] overflow-hidden">
+                  <img src={c.src} alt={c.label} loading="lazy" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <p class="text-xs text-slate-600 font-medium px-3 py-2.5 text-center">{c.label}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <!-- Photo grid -->
     <section class="py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-10">
       <Reveal client:visible>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {["/images/graduation.webp", "/images/consultation-1.webp", "/images/portrait-new-2.webp", "/images/clinic-desk.webp"].map((src, i) => (
+          {["/images/graduation-ceremony.webp", "/images/portrait-desk.webp", "/images/graduation-plaque.webp", "/images/pgdcc-diploma.webp"].map((src, i) => (
             <div class:list={['img-frame rounded-2xl', i % 2 ? 'mt-6' : '']}>
               <img src={src} alt="Dr. Aditi — clinic and milestones" loading="lazy" class="w-full aspect-[3/4] object-cover" />
             </div>
