@@ -8,7 +8,7 @@ export default function HeroSection() {
   const yBlob = useTransform(scrollY, [0, 600], [0, -50]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-16">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20">
       <div className="fluid-bg" />
       <motion.div style={{ y: yBlob }} className="absolute top-24 left-1/2 w-[38rem] h-[38rem] rounded-full pointer-events-none" aria-hidden="true">
         <div className="w-full h-full rounded-full bg-gradient-to-br from-indigo-200/40 via-pink-100/30 to-rose-100/30 blur-3xl" />
