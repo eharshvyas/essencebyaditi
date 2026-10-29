@@ -9,7 +9,7 @@ const POSTS = [
     slug: "trichoscopy-hair-loss-diagnosis",
     title: "Trichoscopy: How Modern Diagnostics Changed My Ayurvedic Hair Practice",
     excerpt: "A trichoscope shows what the naked eye misses — follicle density, miniaturisation, scalp blood flow. Here's why I never treat hair fall without one.",
-    category: "Hair", read_time: "5 min read", image: "/images/patient-treatment.webp",
+    category: "Hair", read_time: "5 min read", image: "/images/clinic-8.webp",
     body: JSON.stringify([
       { h: "Seeing what was always invisible", p: "A trichoscope magnifies the scalp 50–200x. In seconds, I can count follicular units per square centimetre, spot miniaturised hairs (the earliest sign of androgenetic loss), detect perifollicular inflammation, and photograph it all so you can track your own progress month over month. It turns guesswork into evidence." },
       { h: "What trichoscopy reveals by dosha", p: "Vata-pattern scalps show dry, flaky peripilar casts and reduced vascular markings — the scalp is literally starved. Pitta-pattern shows redness, yellow dots and early follicular miniaturisation — classic androgenetic or stress-induced thinning. Kapha-pattern shows thick sebaceous secretion, white scales and fewer but thicker hairs. Each pattern maps directly to a classical protocol." },
@@ -33,7 +33,7 @@ const POSTS = [
     slug: "iron-deficiency-hair-skin-nails-ayurveda",
     title: "Iron Deficiency Is Wrecking Your Hair, Skin and Nails — An Ayurvedic Fix",
     excerpt: "Low ferritin is the most common hidden cause of hair fall, pale skin and brittle nails in Indian women. Ayurveda calls it Pandu and treats it differently.",
-    category: "Women's Health", read_time: "6 min read", image: "/images/clinic-patients.webp",
+    category: "Women's Health", read_time: "6 min read", image: "/images/clinic-3.webp",
     body: JSON.stringify([
       { h: "The silent epidemic", p: "Over 50% of Indian women aged 15–49 are anaemic (NFHS-5). Subclinical iron deficiency — ferritin below 40 ng/mL — is even more prevalent and almost never tested. I see it every week: a woman with diffuse hair shedding, pale inner eyelids, spoon-shaped nails and fatigue who has been told her haemoglobin is 'normal'. Haemoglobin is the last marker to fall; ferritin falls first." },
       { h: "Pandu Roga: the Ayurvedic lens", p: "Classical texts describe Pandu as pallor of skin, nails and eyes with weakness, breathlessness and palpitations — a near-exact clinical match. The pathology: aggravated Pitta burns through rakta dhatu (blood tissue), depleting its quality. Treatment targets both rakta formation and the Pitta that's destroying it — not just cramming iron into a broken furnace." },
@@ -57,7 +57,7 @@ const POSTS = [
     slug: "ayurvedic-cosmetology-facial-treatments",
     title: "Ayurvedic Cosmetology: What Happens in a Medical Facial (and Why It Works)",
     excerpt: "Not a spa facial. A certified Ayurvedic cosmetology treatment diagnoses your skin's dosha, treats the pathology and builds tissue — in 60 minutes.",
-    category: "Skin", read_time: "5 min read", image: "/images/ceremony-event.webp",
+    category: "Skin", read_time: "5 min read", image: "/images/studio-1.webp",
     body: JSON.stringify([
       { h: "Cosmetology with a clinical backbone", p: "Ayurvedic cosmetology is a national-level certification that bridges classical skin science (Twacha Vigyan) with modern derma techniques. It is not spa aesthetics rebranded — it is a diagnostic process. I assess Prakriti, Vikriti, current dosha aggravation and skin layer involvement before choosing a single ingredient. The facial that a Vata skin needs will harm a Pitta skin." },
       { h: "What a session looks like", p: "Step 1: Cleansing with dosha-appropriate medicated milk or herbal decoction. Step 2: Steam or no steam — Pitta skins skip steam entirely. Step 3: Lepa (therapeutic mask) — kumkumadi for Vata dullness, manjishtha-sandalwood for Pitta inflammation, multani-neem for Kapha congestion. Step 4: Marma point facial massage with medicated oil — this is the differentiator. Marma stimulation improves lymphatic drainage, reduces puffiness and delivers medicine into deeper tissue layers." },

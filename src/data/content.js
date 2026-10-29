@@ -45,7 +45,7 @@ export const SERVICES = [
     short: "Your nails mirror your health — brittle, ridged or discoloured nails decoded.",
     long: "Nails are windows to internal imbalance. We diagnose nutritional gaps and dosha disturbances from nail signs and correct them with targeted herbs, minerals and diet.",
     points: ["Brittle & splitting nails", "Fungal infections", "Ridges & discolouration", "Nutrition correction"],
-    image: "/images/still-nails.webp",
+    image: "/images/product-yashti-oil.webp",
   },
   {
     id: "womens-health",
