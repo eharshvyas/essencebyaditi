@@ -33,7 +33,7 @@ const POSTS = [
     slug: "iron-deficiency-hair-skin-nails-ayurveda",
     title: "Iron Deficiency Is Wrecking Your Hair, Skin and Nails — An Ayurvedic Fix",
     excerpt: "Low ferritin is the most common hidden cause of hair fall, pale skin and brittle nails in Indian women. Ayurveda calls it Pandu and treats it differently.",
-    category: "Women's Health", read_time: "6 min read", image: "/images/camp-consultation.webp",
+    category: "Women's Health", read_time: "6 min read", image: "/images/clinic-patients.webp",
     body: JSON.stringify([
       { h: "The silent epidemic", p: "Over 50% of Indian women aged 15–49 are anaemic (NFHS-5). Subclinical iron deficiency — ferritin below 40 ng/mL — is even more prevalent and almost never tested. I see it every week: a woman with diffuse hair shedding, pale inner eyelids, spoon-shaped nails and fatigue who has been told her haemoglobin is 'normal'. Haemoglobin is the last marker to fall; ferritin falls first." },
       { h: "Pandu Roga: the Ayurvedic lens", p: "Classical texts describe Pandu as pallor of skin, nails and eyes with weakness, breathlessness and palpitations — a near-exact clinical match. The pathology: aggravated Pitta burns through rakta dhatu (blood tissue), depleting its quality. Treatment targets both rakta formation and the Pitta that's destroying it — not just cramming iron into a broken furnace." },
@@ -57,7 +57,7 @@ const POSTS = [
     slug: "ayurvedic-cosmetology-facial-treatments",
     title: "Ayurvedic Cosmetology: What Happens in a Medical Facial (and Why It Works)",
     excerpt: "Not a spa facial. A certified Ayurvedic cosmetology treatment diagnoses your skin's dosha, treats the pathology and builds tissue — in 60 minutes.",
-    category: "Skin", read_time: "5 min read", image: "/images/product-yashti-oil.webp",
+    category: "Skin", read_time: "5 min read", image: "/images/ceremony-event.webp",
     body: JSON.stringify([
       { h: "Cosmetology with a clinical backbone", p: "Ayurvedic cosmetology is a national-level certification that bridges classical skin science (Twacha Vigyan) with modern derma techniques. It is not spa aesthetics rebranded — it is a diagnostic process. I assess Prakriti, Vikriti, current dosha aggravation and skin layer involvement before choosing a single ingredient. The facial that a Vata skin needs will harm a Pitta skin." },
       { h: "What a session looks like", p: "Step 1: Cleansing with dosha-appropriate medicated milk or herbal decoction. Step 2: Steam or no steam — Pitta skins skip steam entirely. Step 3: Lepa (therapeutic mask) — kumkumadi for Vata dullness, manjishtha-sandalwood for Pitta inflammation, multani-neem for Kapha congestion. Step 4: Marma point facial massage with medicated oil — this is the differentiator. Marma stimulation improves lymphatic drainage, reduces puffiness and delivers medicine into deeper tissue layers." },

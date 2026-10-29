@@ -143,18 +143,14 @@ import { BRAND, TIMELINE, CREDENTIALS } from '../data/content.js';
         </Reveal>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {[
-            { src: "/images/graduation-cap.webp", alt: "Dr. Aditi — graduation ceremony" },
-            { src: "/images/graduation-ceremony.webp", alt: "Dr. Aditi — BAMS convocation" },
-            { src: "/images/hero-collage-1.webp", alt: "Dr. Aditi — professional portrait" },
-            { src: "/images/ceremony-event.webp", alt: "Dr. Aditi at clinic inauguration" },
-            { src: "/images/camp-consultation.webp", alt: "Dr. Aditi — free health camp consultation" },
-            { src: "/images/patient-treatment.webp", alt: "Dr. Aditi treating a patient at Urban Ayurveda" },
-            { src: "/images/hero-collage-2.webp", alt: "Dr. Aditi at desk" },
+            { src: "/images/graduation-cap.webp", alt: "Dr. Aditi — graduation day" },
+            { src: "/images/ceremony-event.webp", alt: "Dr. Aditi at graduation ceremony" },
+            { src: "/images/patient-treatment.webp", alt: "Dr. Aditi treating a patient" },
+            { src: "/images/camp-consultation.webp", alt: "Dr. Aditi — free health camp" },
+            { src: "/images/clinic-patients.webp", alt: "Patients at Urban Ayurveda clinic" },
             { src: "/images/product-yashti-oil.webp", alt: "Yashti Amlaki Oil by Essence by Aditi" },
             { src: "/images/portrait-desk.webp", alt: "Dr. Aditi at work" },
-            { src: "/images/hero-collage-3.webp", alt: "Dr. Aditi consulting at clinic" },
-            { src: "/images/graduation-plaque.webp", alt: "Dr. Aditi — merit plaque" },
-            { src: "/images/pgdcc-diploma.webp", alt: "PGDCC Diploma" },
+            { src: "/images/graduation-ceremony.webp", alt: "Dr. Aditi — BAMS convocation" },
           ].map((img, i) => (
             <Reveal client:visible delay={i * 0.03}>
               <div class:list={['card-lift img-frame rounded-2xl', i % 3 === 1 ? 'mt-4' : '']}>

@@ -36,7 +36,7 @@ export const SERVICES = [
     short: "Nationally certified cosmetology care for acne, pigmentation & radiant skin.",
     long: "Dosha-specific skincare built on certified Ayurvedic Cosmetology — treating acne, melasma, eczema and dullness with lepas, raktamokshana-informed protocols and internal purification.",
     points: ["Acne & scars", "Pigmentation & melasma", "Anti-ageing rituals", "Eczema & psoriasis support"],
-    image: "/images/still-skin.webp",
+    image: "/images/clinic-patients.webp",
   },
   {
     id: "nails",
@@ -72,7 +72,7 @@ export const SERVICES = [
     short: "Modern diagnostic tools combined with classical Ayurvedic assessment for precise care.",
     long: "As a Maharashtra-registered practitioner, Dr. Aditi uses advanced diagnostic techniques — lab reports, imaging and modern assessment — alongside classical Ayurvedic methods for truly comprehensive and evidence-informed care.",
     points: ["Lab report analysis", "Diet & lifestyle plans", "Chronic disease management", "Yoga & diet counselling"],
-    image: "/images/hero-collage-3.webp",
+    image: "/images/clinic-desk.webp",
   },
 ];
 
