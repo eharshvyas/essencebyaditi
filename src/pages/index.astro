@@ -16,6 +16,7 @@ import { SERVICES, MANIFESTO, PARTNERS, BRAND, SOCIALS } from '../data/content.j
 <Base title="Essence by Aditi — Dr. Aditi Varekar Khatate | Ayurvedic Doctor Navi Mumbai" description="Root-cause Ayurvedic care for hair, skin, nails & women's health by Dr. Aditi Varekar Khatate (BAMS, MD Ayurveda), Navi Mumbai. Book a consultation.">
   <Navbar />
 
+  <main>
   <HeroSection client:load />
   <Marquee client:visible />
 
@@ -124,7 +125,7 @@ import { SERVICES, MANIFESTO, PARTNERS, BRAND, SOCIALS } from '../data/content.j
       <Reveal client:visible>
         <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">Trusted Circle</p>
         <h2 class="font-serif text-3xl md:text-4xl tracking-tight text-brand-dark">Partners & curated <span class="text-magic italic">brands</span></h2>
-        <p class="text-sm text-slate-500 mt-4 max-w-lg mb-14">Clinics we practice with, and Ayurvedic brands we trust enough to recommend.</p>
+        <p class="text-sm text-slate-600 mt-4 max-w-lg mb-14">Clinics we practice with, and Ayurvedic brands we trust enough to recommend.</p>
       </Reveal>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {PARTNERS.map((p, i) => (
@@ -143,7 +144,7 @@ import { SERVICES, MANIFESTO, PARTNERS, BRAND, SOCIALS } from '../data/content.j
           </Reveal>
         ))}
       </div>
-      <p class="text-[11px] text-slate-400 mt-8">Some links above are affiliate links — purchases support the clinic at no extra cost to you.</p>
+      <p class="text-[11px] text-slate-500 mt-8">Some links above are affiliate links — purchases support the clinic at no extra cost to you.</p>
     </div>
   </section>
 
@@ -151,7 +152,7 @@ import { SERVICES, MANIFESTO, PARTNERS, BRAND, SOCIALS } from '../data/content.j
   <section class="py-20 lg:py-28 relative overflow-hidden">
     <div class="fluid-bg"></div>
     <Reveal client:visible className="relative max-w-3xl mx-auto px-6 text-left lg:text-center">
-      <img src="/images/logo.png" alt="" aria-hidden="true" class="w-12 h-12 lg:mx-auto mb-6" width="48" height="48" />
+      <img src="/images/logo.webp" alt="" aria-hidden="true" class="w-12 h-12 lg:mx-auto mb-6" width="48" height="48" />
       <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-brand-dark mb-5">The Essence <span class="text-magic italic">Letter</span></h2>
       <p class="text-slate-600 mb-9 lg:max-w-md lg:mx-auto">One thoughtful email a month — seasonal Ayurvedic rituals, hair & skin wisdom, and women's health science. Free, forever.</p>
       <div class="lg:max-w-md lg:mx-auto">
@@ -164,6 +165,7 @@ import { SERVICES, MANIFESTO, PARTNERS, BRAND, SOCIALS } from '../data/content.j
     </Reveal>
   </section>
 
+  </main>
   <Footer />
   <WhatsApp />
 </Base>

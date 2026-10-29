@@ -48,7 +48,7 @@ export default function HeroSection() {
             {[['7+', 'Years in medicine'], ['4', 'Merit medals'], ['1000s', 'Patients guided']].map(([n, l]) => (
               <div key={l}>
                 <p className="font-serif text-3xl text-brand-navy">{n}</p>
-                <p className="text-xs text-slate-500 mt-1 tracking-wide">{l}</p>
+                <p className="text-xs text-slate-600 mt-1 tracking-wide">{l}</p>
               </div>
             ))}
           </motion.div>

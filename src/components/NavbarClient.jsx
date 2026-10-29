@@ -37,7 +37,7 @@ export default function NavbarClient({ currentPath, lang = 'en' }) {
     <header className="fixed top-3 lg:top-4 inset-x-0 z-50 px-3 sm:px-5">
       <div className={`max-w-5xl mx-auto flex items-center justify-between glass-pill rounded-full pl-4 pr-2 sm:pl-5 py-2 transition-all duration-500 ${scrolled ? 'shadow-xl shadow-blue-900/10 scale-[0.99]' : ''}`}>
         <a href="/" className="flex items-center gap-2.5 group shrink-0">
-          <img src="/images/logo.png" alt="Essence by Aditi logo" className="w-8 h-8 transition-transform duration-500 group-hover:rotate-12" width="32" height="32" />
+          <img src="/images/logo.webp" alt="Essence by Aditi logo" className="w-8 h-8 transition-transform duration-500 group-hover:rotate-12" width="32" height="32" />
           <div className="leading-tight whitespace-nowrap">
             <span className="font-serif text-base sm:text-lg font-semibold text-brand-navy tracking-tight">Essence</span>
             <span className="font-serif italic text-base sm:text-lg text-magic"> by Aditi</span>
