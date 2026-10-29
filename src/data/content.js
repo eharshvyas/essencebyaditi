@@ -4,11 +4,12 @@ export const BRAND = {
   doctorFull: "Dr. Aditi Sanjay Varekar-Khatate, BAMS, MD (Ayurveda)",
   tagline: "Ancient wisdom. Modern techniques. Reclaim the essence.",
   regNo: "Reg. No. I-95034-A (MCIM)",
-  email: "aditisherbal@gmail.com",
-  phone: "+91 89764 63546",
+  email: "essencebyaditi@gmail.com",
+  phone: "+91 89764 63564",
   location: "Kharghar, Thane & Kalyan, Maharashtra",
   domain: "essencebyaditi.com",
-  whatsapp: "918976463546",
+  whatsapp: "918976463564",
+  whatsappChannel: "https://whatsapp.com/channel/0029VbEFLuH5K3zTRfmckK3I",
 };
 
 export const SOCIALS = {
@@ -26,7 +27,7 @@ export const SERVICES = [
     short: "Root-cause treatment for hair fall, dandruff, premature greying & alopecia.",
     long: "Advanced trichoscopy-assisted diagnosis combined with classical Ayurvedic protocols — Shiro Abhyanga, Nasya, herbal formulations and nutrition plans that rebuild hair from the follicle up.",
     points: ["Trichoscopy diagnosis", "Hair fall & alopecia", "Dandruff & scalp care", "Premature greying"],
-    image: "/images/clinic-5.webp",
+    image: "/images/patient-treatment.webp",
   },
   {
     id: "skin",
@@ -53,7 +54,7 @@ export const SERVICES = [
     short: "PCOS, hormonal balance, fertility support & menstrual wellness — naturally.",
     long: "Compassionate, evidence-informed care for PCOS/PCOD, irregular cycles, PMS, menopause and preconception health — blending Ayurvedic Stri Rog science with modern diagnostics.",
     points: ["PCOS / PCOD", "Menstrual disorders", "Fertility & preconception", "Menopause care"],
-    image: "/images/clinic-3.webp",
+    image: "/images/camp-consultation.webp",
   },
   {
     id: "panchakarma",
@@ -71,7 +72,7 @@ export const SERVICES = [
     short: "Modern diagnostic tools combined with classical Ayurvedic assessment for precise care.",
     long: "As a Maharashtra-registered practitioner, Dr. Aditi uses advanced diagnostic techniques — lab reports, imaging and modern assessment — alongside classical Ayurvedic methods for truly comprehensive and evidence-informed care.",
     points: ["Lab report analysis", "Diet & lifestyle plans", "Chronic disease management", "Yoga & diet counselling"],
-    image: "/images/clinic-desk.webp",
+    image: "/images/hero-collage-3.webp",
   },
 ];
 

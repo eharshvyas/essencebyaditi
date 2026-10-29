@@ -134,17 +134,36 @@ import { BRAND, TIMELINE, CREDENTIALS } from '../data/content.js';
       </div>
     </section>
 
-    <!-- Photo grid -->
-    <section class="py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-10">
-      <Reveal client:visible>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {["/images/graduation-ceremony.webp", "/images/portrait-desk.webp", "/images/graduation-plaque.webp", "/images/pgdcc-diploma.webp"].map((src, i) => (
-            <div class:list={['img-frame rounded-2xl', i % 2 ? 'mt-6' : '']}>
-              <img src={src} alt="Dr. Aditi — clinic and milestones" loading="lazy" width="300" height="400" class="w-full aspect-[3/4] object-cover" />
-            </div>
+    <!-- Photo Gallery -->
+    <section class="py-20 lg:py-28 bg-white/50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <Reveal client:visible>
+          <p class="text-xs uppercase tracking-[0.25em] text-brand-blue font-semibold mb-4">Gallery</p>
+          <h2 class="font-serif text-3xl md:text-4xl tracking-tight text-brand-dark mb-14">Moments from the <span class="text-magic italic">journey</span></h2>
+        </Reveal>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[
+            { src: "/images/graduation-cap.webp", alt: "Dr. Aditi — graduation ceremony" },
+            { src: "/images/graduation-ceremony.webp", alt: "Dr. Aditi — BAMS convocation" },
+            { src: "/images/hero-collage-1.webp", alt: "Dr. Aditi — professional portrait" },
+            { src: "/images/ceremony-event.webp", alt: "Dr. Aditi at clinic inauguration" },
+            { src: "/images/camp-consultation.webp", alt: "Dr. Aditi — free health camp consultation" },
+            { src: "/images/patient-treatment.webp", alt: "Dr. Aditi treating a patient at Urban Ayurveda" },
+            { src: "/images/hero-collage-2.webp", alt: "Dr. Aditi at desk" },
+            { src: "/images/product-yashti-oil.webp", alt: "Yashti Amlaki Oil by Essence by Aditi" },
+            { src: "/images/portrait-desk.webp", alt: "Dr. Aditi at work" },
+            { src: "/images/hero-collage-3.webp", alt: "Dr. Aditi consulting at clinic" },
+            { src: "/images/graduation-plaque.webp", alt: "Dr. Aditi — merit plaque" },
+            { src: "/images/pgdcc-diploma.webp", alt: "PGDCC Diploma" },
+          ].map((img, i) => (
+            <Reveal client:visible delay={i * 0.03}>
+              <div class:list={['card-lift img-frame rounded-2xl', i % 3 === 1 ? 'mt-4' : '']}>
+                <img src={img.src} alt={img.alt} loading="lazy" width="300" height="400" class="w-full aspect-[3/4] object-cover" />
+              </div>
+            </Reveal>
           ))}
         </div>
-      </Reveal>
+      </div>
     </section>
   </main>
 

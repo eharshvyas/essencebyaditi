@@ -60,19 +60,29 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            className="relative grid grid-cols-2 gap-3"
           >
-            <div className="absolute -inset-3 rounded-[2.3rem] bg-gradient-to-br from-indigo-200/50 via-white/0 to-pink-200/50 blur-sm" aria-hidden="true" />
-            <div className="img-frame relative rounded-[2rem] rotate-1 shadow-2xl shadow-blue-900/15 overflow-hidden">
-              <img src="/images/hero-aditi.webp" alt="Dr. Aditi Varekar Khatate at her clinic" className="w-full aspect-[4/5] object-cover" width="500" height="625" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A8A]/30 via-transparent via-40% to-pink-100/20 rounded-[2rem]" aria-hidden="true" />
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-transparent to-pink-900/15 rounded-[2rem]" aria-hidden="true" />
+            <div className="space-y-3">
+              <div className="img-frame rounded-[1.5rem] shadow-xl shadow-blue-900/10 overflow-hidden">
+                <img src="/images/hero-aditi.webp" alt="Dr. Aditi Varekar Khatate" className="w-full aspect-[3/4] object-cover" width="280" height="373" fetchPriority="high" />
+              </div>
+              <div className="img-frame rounded-[1.5rem] shadow-lg shadow-pink-900/10 overflow-hidden">
+                <img src="/images/hero-collage-2.webp" alt="Dr. Aditi at her clinic desk" className="w-full aspect-square object-cover" width="280" height="280" loading="lazy" />
+              </div>
+            </div>
+            <div className="space-y-3 pt-8">
+              <div className="img-frame rounded-[1.5rem] shadow-lg shadow-indigo-900/10 overflow-hidden">
+                <img src="/images/hero-collage-1.webp" alt="Dr. Aditi — professional portrait" className="w-full aspect-[3/4] object-cover" width="280" height="373" loading="lazy" />
+              </div>
+              <div className="img-frame rounded-[1.5rem] shadow-lg shadow-blue-900/10 overflow-hidden">
+                <img src="/images/hero-collage-3.webp" alt="Dr. Aditi consulting at Urban Ayurveda" className="w-full aspect-square object-cover" width="280" height="280" loading="lazy" />
+              </div>
             </div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.2 }}
-              className="absolute -bottom-6 -left-6 glass rounded-2xl px-5 py-4 max-w-[240px]"
+              className="absolute -bottom-6 -left-4 glass rounded-2xl px-5 py-4 max-w-[240px] z-10"
             >
               <p className="font-serif italic text-sm text-brand-navy">"Radiance, Inside Out."</p>
               <p className="text-[11px] text-slate-500 mt-2">— Dr. Aditi Varekar Khatate</p>

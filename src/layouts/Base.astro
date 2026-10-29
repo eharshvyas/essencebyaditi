@@ -18,6 +18,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/favicon-64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1E3A8A" />
     <title>{title}</title>
@@ -32,52 +33,81 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content="https://essencebyaditi.com/images/hero-aditi.webp" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="625" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://essencebyaditi.com/images/hero-aditi.webp" />
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Kharghar, Navi Mumbai" />
+    <meta name="geo.position" content="19.0330;73.0630" />
+    <meta name="ICBM" content="19.0330, 73.0630" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="preload" as="image" href="/images/hero-aditi.webp" />
+    <link rel="preload" as="image" href="/images/hero-aditi.webp" fetchpriority="high" />
     <link rel="manifest" href="/manifest.json" />
     {lang === 'mr' ? (
       <>
         <link rel="alternate" hreflang="mr" href={`https://essencebyaditi.com${canonicalURL.pathname}`} />
         <link rel="alternate" hreflang="en" href={`https://essencebyaditi.com${canonicalURL.pathname.replace(/^\/mr/, '') || '/'}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://essencebyaditi.com${canonicalURL.pathname.replace(/^\/mr/, '') || '/'}`} />
       </>
     ) : (
       <>
         <link rel="alternate" hreflang="en" href={`https://essencebyaditi.com${canonicalURL.pathname}`} />
         <link rel="alternate" hreflang="mr" href={`https://essencebyaditi.com/mr${canonicalURL.pathname}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://essencebyaditi.com${canonicalURL.pathname}`} />
       </>
     )}
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Aditi Varekar Khatate",
-      "alternateName": "Dr. Aditi Sanjay Varekar",
-      "url": "https://essencebyaditi.com",
-      "image": "https://essencebyaditi.com/images/hero-aditi.webp",
-      "medicalSpecialty": ["Ayurveda", "Trichology", "Dermatology", "Gynecology"],
-      "description": "Ayurvedic physician (BAMS, MD Ayurveda) specialising in hair, skin, nails, women's health, PCOS and Panchakarma in Navi Mumbai, Maharashtra.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kharghar, Navi Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "410210",
-        "addressCountry": "IN"
-      },
-      "telephone": "+918976463546",
-      "email": "aditisherbal@gmail.com",
-      "sameAs": [
-        "https://in.linkedin.com/in/aditi-varekar-khatate-622699261",
-        "https://instagram.com/dr.aditi_ayurveda"
-      ],
-      "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MD (Ayurveda), YMT Ayurvedic Medical College, 2024"},
-        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "BAMS, YMT Ayurvedic Medical College, 2019"}
+      "@graph": [
+        {
+          "@type": "Physician",
+          "@id": "https://essencebyaditi.com/#physician",
+          "name": "Dr. Aditi Varekar Khatate",
+          "alternateName": "Dr. Aditi Sanjay Varekar",
+          "url": "https://essencebyaditi.com",
+          "image": "https://essencebyaditi.com/images/hero-aditi.webp",
+          "medicalSpecialty": ["Ayurveda", "Trichology", "Dermatology", "Gynecology"],
+          "description": "Ayurvedic physician (BAMS, MD Ayurveda) specialising in hair, skin, nails, women's health, PCOS and Panchakarma in Navi Mumbai, Maharashtra.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kharghar, Navi Mumbai",
+            "addressRegion": "Maharashtra",
+            "postalCode": "410210",
+            "addressCountry": "IN"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 19.033, "longitude": 73.063 },
+          "telephone": "+918976463564",
+          "email": "essencebyaditi@gmail.com",
+          "priceRange": "$$",
+          "openingHours": ["Mo-Sa 10:00-14:00", "Mo-Sa 18:00-21:00"],
+          "sameAs": [
+            "https://in.linkedin.com/in/aditi-varekar-khatate-622699261",
+            "https://instagram.com/dr.aditi_ayurveda",
+            "https://www.facebook.com/share/18SYWw1Qcc/",
+            "https://youtube.com/@aditivarekarkhatate8176"
+          ],
+          "hasCredential": [
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MD (Ayurveda), YMT Ayurvedic Medical College, 2024"},
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "BAMS, YMT Ayurvedic Medical College, 2019"}
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://essencebyaditi.com/#website",
+          "url": "https://essencebyaditi.com",
+          "name": "Essence by Aditi",
+          "description": "Ayurvedic care for hair, skin, nails & women's health by Dr. Aditi Varekar Khatate, Navi Mumbai.",
+          "publisher": {"@id": "https://essencebyaditi.com/#physician"},
+          "inLanguage": ["en", "mr"]
+        }
       ]
     })} />
   </head>
